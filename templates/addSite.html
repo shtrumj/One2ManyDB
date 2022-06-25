@@ -1,0 +1,28 @@
+{%  extends 'base.html' %}
+{% block title %} AddASite {% endblock %}
+
+{%  block content %}
+<h1> Add a new Site</h1>
+<form method="POST" >
+{{  form.csrf_token }}
+<p>
+    {{ form.siteName.label }}
+    {{ form.siteName }}
+</p>
+    <p>
+        {{ form.external_ip.label }}
+        {{  form.external_ip }}
+    </p>
+    <p>
+        {{ form.available.label }}
+        {{ form.available }}
+
+    </p>
+<p>
+    <input type="submit" value="Create a Site">
+</p>
+
+
+
+</form>
+{%  endblock %}
